@@ -1,6 +1,6 @@
 package beans.imple;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import beans.CommNotiProxy;
@@ -8,7 +8,7 @@ import domain.Comment;
 import util.UTF_8_Printer;
 
 @Component
-@Primary
+@Qualifier("push")
 public class CommPushNotiProxy implements CommNotiProxy {
 
 	@Override
